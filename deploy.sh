@@ -13,7 +13,7 @@ rm csrgo
 kubectl delete pod csrgo --grace-period=0 --force  -n default
 	
 # Build the container
-GOOS=linux go build -o ./app .
+GOOS=linux go build -o ./csrgo .
 docker build -t csrgo .
 
 kubectl create clusterrolebinding default-view \
