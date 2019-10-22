@@ -1,6 +1,6 @@
 # Critical Systems Reconciliation GO
 
-The puposes of CSRGO is to provide reconcilistion of a clusters runtime 
+The puposes of CSRGO is to provide reconcilistion of a k8s clusters runtime 
 configuration and associated technology assests. This is tested against an
 agreed specification and known state of the system in question. This repository 
 contains unit tests for the components which assemble these critical systems 
