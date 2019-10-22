@@ -1,6 +1,0 @@
-.git
-.gitignore
-fabric8-rbac.yaml
-deploy.sh
-exec.sh
-README.md

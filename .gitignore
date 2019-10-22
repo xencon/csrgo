@@ -1,7 +1,1 @@
-*.idea/
-*.swp
-*.main
 csrgo
-dash-rebuild-cluster.sh
-delete-pod.sh
-startup.sh
