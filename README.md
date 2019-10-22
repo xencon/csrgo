@@ -9,5 +9,5 @@
 
 ### Execute the process.
 ```
-./exec.sh
+kubectl -n default logs csrgo 
 ```

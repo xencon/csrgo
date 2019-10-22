@@ -30,5 +30,3 @@ kubectl run -i -t csrgo \
 --image-pull-policy=Never \
 --restart=Never \
 --replicas=1
-
-kubectl -n default logs csrgo
