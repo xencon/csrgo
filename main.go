@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fatih/color"
-	_ "github.com/fatih/color"
 	"github.com/xencom/csrgo/env.vars"
 	"strings"
 	"time"

@@ -1,8 +1,6 @@
 .git
 .gitignore
-scripts/*
-dash-rebuild-cluster.sh
 fabric8-rbac.yaml
+deploy.sh
+exec.sh
 README.md
-rebuild-pod.sh
-run-pod.sh
