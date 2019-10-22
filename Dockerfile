@@ -6,10 +6,10 @@ ENV             GO111MODULE=on
 COPY            go.mod go.sum ./
 RUN             go mod download
 COPY            . ./
-RUN             go build -o . -ldflags "-extldflags \"-static\"" -v
+RUN             go build -o /go/bin/csrgo -ldflags "-extldflags \"-static\"" -v
 
 # minimal runtime
 FROM            alpine
-COPY            --from=builder /csrgo /csrgo
+COPY            --from=builder /go/bin/csrgo /bin/csrgo
 WORKDIR         /
-ENTRYPOINT      ["/csrgo"]
+ENTRYPOINT      ["/bin/csrgo"]
