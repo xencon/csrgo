@@ -8,7 +8,7 @@ rm csrgo
 kubectl delete pod csrgo --grace-period=5  -n default
 
 
-GOOS=linux go build -o ./main.go .
+GOOS=linux go build -o ./csrgo .
 eval $(minikube docker-env)
 docker build -t csrgo .
 
