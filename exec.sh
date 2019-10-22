@@ -1,7 +1,8 @@
 kubectl run -i -t csrgo \
-   --generator=run-pod/v1 \
-   --image=csrgo \
-   --image-pull-policy=Never \
-   --restart=Never
+--namespace=jx \
+--generator=run-pod/v1 \
+--image=csrgo \
+--image-pull-policy=Never \
+--restart=Never
 
-kubectl logs csrgo
+kubectl logs -n jx csrgo istio-proxy
