@@ -1,0 +1,7 @@
+*.idea/
+*.swp
+*.main
+app
+dash-rebuild-cluster.sh
+delete-pod.sh
+startup.sh
