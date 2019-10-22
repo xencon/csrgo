@@ -1,4 +1,3 @@
-
 kubectl run -i -t csrgo \
    --generator=run-pod/v1 \
    --image=csrgo \

@@ -13,6 +13,6 @@ require (
 	golang.org/x/time v0.0.0-20190921001708-c4c64cad1fd0 // indirect
 	k8s.io/api v0.0.0-20191016225839-816a9b7df678 // indirect
 	k8s.io/apimachinery v0.0.0-20191020214737-6c8691705fc5 // indirect
-	k8s.io/client-go v11.0.0+incompatible
+	k8s.io/client-go v0.0.0-20190425172711-65184652c889
 	k8s.io/utils v0.0.0-20191010214722-8d271d903fe4 // indirect
 )

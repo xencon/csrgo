@@ -4,10 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fatih/color"
-	"github.com/xencom/csrgo/env.vars"
+	"github.com/xencon/csrgo/env.vars"
 	"strings"
 	"time"
-
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 )

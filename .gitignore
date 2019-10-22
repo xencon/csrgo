@@ -1,7 +1,7 @@
 *.idea/
 *.swp
 *.main
-app
+csrgo
 dash-rebuild-cluster.sh
 delete-pod.sh
 startup.sh
