@@ -1,4 +1,4 @@
-module gtihub.com/xencon/csrgo
+module github.com/xencon/csrgo
 
 go 1.13
 
