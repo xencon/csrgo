@@ -1,16 +1,4 @@
-package env_vars
-
-//K8s Expected values
-
-func KubeApiExpected() string{
-	KubeApiExpected := "k8s.gcr.io/kube-apiserver:v1.15.2"
-	return KubeApiExpected
-}
-
-func KubeAddonExpected() string {
-	KubeAddonExpected := "k8s.gcr.io/kube-addon-manager:v9.0.2"
-	return KubeAddonExpected
-}
+package istio
 
 //Istio Expected Values
 

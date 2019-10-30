@@ -1,4 +1,4 @@
-package env_vars
+package k8s
 
 //K8s Expected values
 
