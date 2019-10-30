@@ -4,8 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/fatih/color"
-	"github.com/xencon/csrgo/asserts/istio"
-	"github.com/xencon/csrgo/asserts/k8s"
+	"github.com/xencon/csrgo/asserts"
 	"strings"
 	"time"
 	"k8s.io/client-go/kubernetes"
@@ -154,10 +153,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "all-in-one") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.AllInOneExpected())
+					fmt.Println("EXP =", asserts.AllInOneExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.AllInOneExpected() {
+					if cr.Image == asserts.AllInOneExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -174,10 +173,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "citadel") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.CitadelExpected())
+					fmt.Println("EXP =", asserts.CitadelExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.CitadelExpected() {
+					if cr.Image == asserts.CitadelExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -193,10 +192,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "proxyv2") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.EgressGatewayExpected())
+					fmt.Println("EXP =", asserts.EgressGatewayExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.EgressGatewayExpected() {
+					if cr.Image == asserts.EgressGatewayExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -212,10 +211,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "galley") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.GalleyExpected())
+					fmt.Println("EXP =", asserts.GalleyExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.GalleyExpected() {
+					if cr.Image == asserts.GalleyExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -231,10 +230,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "grafana") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.GrafanaExpected())
+					fmt.Println("EXP =", asserts.GrafanaExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.GrafanaExpected() {
+					if cr.Image == asserts.GrafanaExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -250,10 +249,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "proxyv2") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.IngressGatewayExpected())
+					fmt.Println("EXP =", asserts.IngressGatewayExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.IngressGatewayExpected() {
+					if cr.Image == asserts.IngressGatewayExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -269,10 +268,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "mixer") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.MixerExpected())
+					fmt.Println("EXP =", asserts.MixerExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.MixerExpected() {
+					if cr.Image == asserts.MixerExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -288,10 +287,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "node-agent") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.NodeAgentExpected())
+					fmt.Println("EXP =", asserts.NodeAgentExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.NodeAgentExpected() {
+					if cr.Image == asserts.NodeAgentExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -307,10 +306,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "pilot") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.PilotExpected())
+					fmt.Println("EXP =", asserts.PilotExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.PilotExpected() {
+					if cr.Image == asserts.PilotExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -326,10 +325,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "prometheus") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.PrometheusExpected())
+					fmt.Println("EXP =", asserts.PrometheusExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.PrometheusExpected() {
+					if cr.Image == asserts.PrometheusExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -345,10 +344,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "quay") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.QuayExpected())
+					fmt.Println("EXP =", asserts.QuayExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.QuayExpected() {
+					if cr.Image == asserts.QuayExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -364,10 +363,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "sidecar_injector") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.SidecarExpected())
+					fmt.Println("EXP =", asserts.SidecarExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.SidecarExpected() {
+					if cr.Image == asserts.SidecarExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -385,10 +384,10 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "kube-addon-manager") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.KubeAddonExpected())
+					fmt.Println("EXP =", asserts.KubeAddonExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
-					if cr.Image == env_vars.KubeAddonExpected() {
+					if cr.Image == asserts.KubeAddonExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -404,11 +403,11 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "kube-apiserver") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.KubeApiExpected())
+					fmt.Println("EXP =", asserts.KubeApiExpected())
 					fmt.Println("ACT =", cr.Image)
 					fmt.Print("RES = ")
 					//Erroneous evaluation
-					if cr.Image == env_vars.KubeApiExpected() {
+					if cr.Image == asserts.KubeApiExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
@@ -424,11 +423,11 @@ func main() {
 			for _, cr := range p.Spec.Containers {
 				if strings.Contains(cr.Name, "kube-addon-manager") {
 					color.Cyan("POD = " + p.Metadata.Name + "\n")
-					fmt.Println("EXP =", env_vars.KubeAddonExpected())
+					fmt.Println("EXP =", asserts.KubeAddonExpected())
 					fmt.Println("ACT =", "k8s.gcr.io/kube-addon-manager:v9.2")
 					fmt.Print("RES = ")
 					//Erroneous evaluation
-					if "k8s.gcr.io/kube-addon-manager:v9.2" == env_vars.KubeAddonExpected() {
+					if "k8s.gcr.io/kube-addon-manager:v9.2" == asserts.KubeAddonExpected() {
 						color.Green("PASS" + "\n\n")
 					} else {
 						color.Red("FAIL" + "\n\n")
