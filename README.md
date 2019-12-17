@@ -36,7 +36,8 @@ Google Kubernetes Engine.
 Make sure your environment is configured for the project and cluster you are testing.
 ```
 ]$ kubectx
-minikube
+dev
+prd
 ```
 
 ### Tooling
