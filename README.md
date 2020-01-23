@@ -5,7 +5,7 @@ configuration and associated technology assests. This is tested against an
 agreed specification and known state of the system in question. This repository 
 contains unit tests for the components which assemble these critical systems 
 and which together make up a complete deployment of the cloud infrastructure, 
-application platform and mobile application. 
+application platform and the application. 
 
 ### Approach
 Test coverage is the main priority of any CSRGO effort. Once the api has been
