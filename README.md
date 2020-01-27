@@ -7,6 +7,8 @@ contains unit tests for the components which assemble these critical systems
 and which together make up a complete deployment of the cloud infrastructure, 
 application platform and the application. 
 
+![](images/csrgo.png)
+
 ### Approach
 Test coverage is the main priority of any CSRGO effort. Once the api has been
 studied and the appropriate tool or tools have been selected the test cases
