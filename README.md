@@ -39,6 +39,7 @@ Make sure your environment is configured for the project and cluster you are tes
 ```
 ]$ kubectx
 dev
+uat
 prd
 ```
 
