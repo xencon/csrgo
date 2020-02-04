@@ -1,11 +1,11 @@
 # Critical Systems Reconciliation GO
 
 The puposes of CSRGO is to provide reconcilistion of a k8s clusters runtime 
-configuration and associated technology assests. This is tested against an
-agreed specification and known state of the system in question. This repository 
+configuration and associated resources. This is tested against an agreeed
+specification and known state of the system in question. This repository 
 contains unit tests for the components which assemble these critical systems 
 and which together make up a complete deployment of the cloud infrastructure, 
-application platform and the application. 
+application platform and mobile application. 
 
 ![](images/csrgo.png)
 
